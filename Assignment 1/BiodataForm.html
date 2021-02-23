@@ -11,44 +11,44 @@
             <legend>Personal Information</legend>
 
             <label for="firstName">FirstName:</label>
-            <input type="text" id="firstName" placeholder="First Name" >
+            <input type="text" id="firstName" placeholder="First Name" required>
 
             <label for="lastName">FirstName:</label>
-            <input type="text" id="lastName" placeholder="Last Name">
+            <input type="text" id="lastName" placeholder="Last Name" required>
 
             <br>
             <br>
 
             <label for="male">Male</label>
-            <input type="radio" name="gender" id="male">
+            <input type="radio" name="gender" id="male" required>
             <label for="female">Female</label>
-            <input type="radio" name="gender" id="female">
+            <input type="radio" name="gender" id="female" required>
             <label for="other">Other</label>
-            <input type="radio" name="gender" id="other">
+            <input type="radio" name="gender" id="other" required>
 
             <br>
             <br>
 
             <label for="date">Date of birth:</label>
-            <input type="date" name="date" id="date">
+            <input type="date" name="date" id="date" required>
 
             <br>
             <br>
 
             <label for="email">E-mail:</label>
-            <input type="email" name="email" id="email" placeholder="Enter Your Email" >
+            <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
 
             <br>
             <br>
 
             <label for="phone">Phone:</label>
-            <input type="text" name="phone" id="phone" placeholder="+91" maxlength="10" >
+            <input type="text" name="phone" id="phone" placeholder="+91" minlength="10" maxlength="10" required >
 
             <br>
             <br>
 
             <label for="height">Height:</label>
-            <input type="text" name="height" id="height" placeholder="Height in Feet">
+            <input type="text" name="height" id="height" placeholder="Height in Feet" required> 
 
         </fieldset>
 
@@ -57,13 +57,13 @@
             <legend>Education</legend>
 
             <label for="school">School Name:</label>
-            <input type="text" placeholder="School Name" id="school"> 
+            <input type="text" placeholder="School Name" id="school" required> 
 
             <br>
             <br>
 
             <label for="class">Class:</label>
-            <input type="number" placeholder="Enter Class" id="class">
+            <input type="number" placeholder="Enter Class" id="class" min="1" max="12" required>
 
             <br>
             <br>
@@ -74,13 +74,15 @@
                 <option value="Science">Science</option>
                 <option value="Commerce">Commerce</option>
                 <option value="Arts">Arts</option>
+                <option value="others">Others</option>
+
             </select>
 
             <br>
             <br>
 
             <label for="marksheet">Marksheet:</label>
-            <input type="file" id="marksheet">
+            <input type="file" id="marksheet" accept="image/*,.pdf,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
 
         </fieldset>
 
