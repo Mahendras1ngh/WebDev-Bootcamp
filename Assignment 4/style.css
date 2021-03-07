@@ -169,6 +169,30 @@ hr {
   height: 85%;
 }
 
+.card figcaption{
+    padding-left: 20px;
+    color: #f72585;
+}
+
+.card figcaption span{
+    font-weight: 700;
+}
+
+.card button{
+    position:relative;
+    left: 80%;
+    bottom: 30px;
+    color: #f72585;
+    border: 1px solid #f72585;
+    padding: 3px 10px;
+    cursor: pointer;
+}
+
+.card button:hover{
+    color: white;
+    background-color: #f72585;
+}
+
 #photos {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
