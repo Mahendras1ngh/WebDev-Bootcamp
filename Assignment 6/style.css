@@ -129,4 +129,5 @@ body {
   font-weight: 600;
   letter-spacing: 1px;
   border-radius: 5px;
+  cursor: pointer;
 }
