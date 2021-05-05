@@ -1,0 +1,44 @@
+<section class="container mt-4">
+  <div class="card col-md-6 col-sm-12 mx-2 mb-4" style="width: 80vw">
+    <h5 class="card-title m-3"><%=blog.title%></h5>
+    <img src="<%=blog.img%>" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <p class="card-text"><%=blog.desc%>...</p>
+      <h5 class="card-title">-<%=blog.author%></h5>
+      <div class="d-flex align-items-center mt-4">
+        <a href="/<%= blog.id %>/edit" class="btn btn-warning">Edit</a>
+        <form action="/<%= blog.id %>?_method=DELETE" method="POST">
+          <button type="submit" class="btn btn-danger ms-4">Delete</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <h1>Comments</h1>
+  <div class="comments">
+    <% for(let comment of blog.comments){ %>
+    <div class="card mb-4" style="width: 80vw; background: transparent">
+      <div class="card-header comment-head"><%= comment.user %></div>
+      <div class="card-body comment-body">
+        <p><%= comment.body %></p>
+      </div>
+    </div>
+    <% } %>
+  </div>
+  <form action="/<%= blog.id %>/comment" method="POST" class="mb-4">
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label"
+        >Add your Comment here...</label
+      >
+      <textarea
+        class="form-control"
+        id="exampleFormControlTextarea1"
+        rows="3"
+        name="commentBody"
+      ></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Post</button>
+  </form>
+</section>
